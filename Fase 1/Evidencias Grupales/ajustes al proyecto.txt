@@ -1,0 +1,28 @@
+preguntar por los intereses de la persona para que genere un perfil y de una orientación de cual posible carrera podría elegir la persona, que lo identifique según su perfil.
+
+					-> si -> quiere asesoramiento -> no -> agente que te ayuda en el proceso de tu carrera
+supervisor -> sabe que carrera quiere? -> si -> quiere asesoramiento -> si -> agente que asesora
+					-> no -> agente que asesora
+
+
+se podría añadir powerbi para visualizar las carreras que se han consultado, para hacer seguimiento o para proyecciones a futuro
+
+
+evidencias se declaran (backlog, historias de usuario, épicas, tareas, etc)
+
+
+
+graph TD
+    subgraph "Flujo de Agentes IA"
+        A[Agente Supervisor] --> B{¿El usuario sabe qué carrera quiere?};
+        B -- Si --> C{¿Quiere asesoramiento?};
+        B -- No --> D[Agente que Asesora];
+        C -- Si --> D;
+        C -- No --> E[Agente de Ayuda en Carrera Especifica];
+        D --> F[Se Realiza Perfil de Usuario];
+     
+    end
+
+    style A fill:#D6EAF8,stroke:#3498DB,stroke-width:2px
+    style D fill:#D5F5E3,stroke:#2ECC71,stroke-width:2px
+    style E fill:#FCF3CF,stroke:#F1C40F,stroke-width:2px
